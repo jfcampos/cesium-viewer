@@ -78,7 +78,7 @@ A personal learning project that integrates [CesiumJS](https://cesium.com/platfo
 
 ## Testing
 
-- **Unit tests** (Vitest, jsdom): there are no unit tests yet; `pnpm test:unit` passes when none are found. Note that jsdom has no WebGL, so components that create a Cesium `Viewer` can't be mounted as-is.
+- **Unit tests** (Vitest, jsdom): `src/stores/__tests__/viewer.spec.ts` covers the Pinia viewer store (selection state and tileset settings). Note that jsdom has no WebGL, so components that create a Cesium `Viewer` can't be mounted as-is.
 - **End-to-end tests** (Cypress): a smoke test in `cypress/e2e/app.cy.ts` checks that the app loads and renders the app bar. `pnpm test:e2e` runs against the production preview, so run `pnpm build` first.
 
 ## AI Disclosure
