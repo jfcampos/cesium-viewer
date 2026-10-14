@@ -1,70 +1,62 @@
-# .
+# Cesium + Vue Viewer
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal learning project that integrates [CesiumJS](https://cesium.com/platform/cesiumjs/) into a [Vue 3](https://vuejs.org/) application built with [Vite](https://vite.dev/).
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`) + TypeScript
+- [CesiumJS](https://cesium.com/platform/cesiumjs/) for the 3D globe
+- [Vite](https://vite.dev/) as dev server and bundler
+- [Pinia](https://pinia.vuejs.org/) and [Vue Router](https://router.vuejs.org/)
+- [Vitest](https://vitest.dev/) for unit tests, [Cypress](https://www.cypress.io/) for end-to-end tests
+- [ESLint](https://eslint.org/), [Oxlint](https://oxc.rs/) and [Prettier](https://prettier.io/) for linting and formatting
 
-## Recommended Browser Setup
+## Prerequisites
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- [Node.js](https://nodejs.org/) `^22.18.0` or `>=24.12.0`
+- [pnpm](https://pnpm.io/)
+- A [Cesium ion](https://ion.cesium.com/) account and access token (used for world terrain and imagery)
 
-## Type Support for `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Install dependencies:
 
-## Customize configuration
+   ```sh
+   pnpm install
+   ```
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+2. Create a `.env` file from the example and set your Cesium ion token:
 
-## Project Setup
+   ```sh
+   cp .env.example .env
+   ```
 
-```sh
-pnpm install
-```
+   ```dotenv
+   VITE_CESIUM_ION_ACCESS_TOKEN=<your-cesium-ion-token>
+   ```
 
-### Compile and Hot-Reload for Development
+3. Start the development server:
 
-```sh
-pnpm dev
-```
+   ```sh
+   pnpm dev
+   ```
 
-### Type-Check, Compile and Minify for Production
+## Scripts
 
-```sh
-pnpm build
-```
+| Command             | Description                                               |
+| ------------------- | --------------------------------------------------------- |
+| `pnpm dev`          | Start the Vite dev server with hot reload                 |
+| `pnpm build`        | Type-check and build for production                       |
+| `pnpm preview`      | Serve the production build locally                        |
+| `pnpm type-check`   | Run `vue-tsc` type checking                               |
+| `pnpm test:unit`    | Run unit tests with Vitest                                |
+| `pnpm test:e2e:dev` | Run Cypress end-to-end tests against the dev server       |
+| `pnpm test:e2e`     | Run Cypress end-to-end tests against the production build |
+| `pnpm lint`         | Lint and auto-fix with Oxlint and ESLint                  |
+| `pnpm format`       | Format `src/` with Prettier                               |
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## AI Disclosure
 
-```sh
-pnpm test:unit
-```
+Since this is a personal project with the goal of learning both technologies, no AI has been used for the code.
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-pnpm test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-pnpm build
-pnpm test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+See [AI-DECLARATION.md](./AI-DECLARATION.md) for details on how AI tools were used in this repository.

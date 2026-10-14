@@ -1,11 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import GeospatialViewer from './components/GeospatialViewer.vue'
+import 'cesium/Build/Cesium/Widgets/widgets.css'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <h1>Geospatial Viewer</h1>
+
+  <GeospatialViewer></GeospatialViewer>
 </template>
 
 <style scoped></style>
