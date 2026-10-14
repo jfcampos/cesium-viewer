@@ -1,15 +1,16 @@
 ---
 version: '0.1.2'
-level: assist
+level: hint
 processes:
   documentation: pair
-  deployment: pair
+  testing: pair
+  review: pair
 ---
 
 This format is based on [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.2).
 
 ## Notes
 
-- AI assisted in setting up vite.config.ts for the cesium static files
-- AI wrote github actions files
-- No AI was used for the rest of the code
+- AI generated documentation, and tests.
+- AI reviewed the code and helped improving it.
+- Most of the code was manually written.
