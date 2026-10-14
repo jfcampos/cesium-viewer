@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/roboto':
+        specifier: ^5.3.0
+        version: 5.3.0
       cesium:
         specifier: ^1.146.0
         version: 1.146.0
@@ -20,6 +23,9 @@ importers:
       vue-router:
         specifier: ^5.3.1
         version: 5.4.0(@vue/compiler-sfc@3.5.44)(pinia@4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.44(typescript@6.0.3)))(rolldown@1.2.13)(vite@8.3.4(@types/node@24.19.2)(jiti@2.7.0))(vue@3.5.44(typescript@6.0.3))
+      vuetify:
+        specifier: ^4.2.5
+        version: 4.2.5(typescript@6.0.3)(vue@3.5.44(typescript@6.0.3))
     devDependencies:
       '@tsconfig/node24':
         specifier: ^24.0.5
@@ -376,6 +382,9 @@ packages:
     peerDependenciesMeta:
       '@noble/hashes':
         optional: true
+
+  '@fontsource/roboto@5.3.0':
+    resolution: {integrity: sha512-BapRJOWYP+LZ21zp+wBQjfpPYKRoxc4LspJ/RLuI+HSMBD5u/X4O+ESDrSvEqDSy0rAl7GwBJ+09mdc16cVQ1Q==}
 
   '@hapi/address@5.1.1':
     resolution: {integrity: sha512-A+po2d/dVoY7cYajycYI43ZbYMXukuopIsqCjh5QzsBCipDtdofHntljDlpccMjIfTy6UOkg+5KPriwYch2bXA==}
@@ -939,6 +948,39 @@ packages:
       typescript:
         optional: true
       vue:
+        optional: true
+
+  '@vuetify/v0@1.2.3':
+    resolution: {integrity: sha512-8qpYa88KxKrvi4jQcz+Zg4WH04un48Lt7Tj0Qq+LqvbUvHi+H177vWqBn9tQWgpxBVs1RXrTz5zw0Cy6txJHlw==}
+    peerDependencies:
+      '@adobe/leonardo-contrast-colors': '>=1.0.0'
+      '@ant-design/colors': '>=7.0.0'
+      '@flagsmith/flagsmith': '>=11.0.0'
+      '@floating-ui/dom': '>=1.8.0'
+      '@js-temporal/polyfill': '>=0.5.0'
+      '@material/material-color-utilities': '>=0.3.0'
+      launchdarkly-js-client-sdk: ^3.0.0
+      posthog-js: ^1.0.0
+      vue: '>=3.5.0 || >=3.6.0-0'
+      vue-i18n: '>=10.0.0'
+    peerDependenciesMeta:
+      '@adobe/leonardo-contrast-colors':
+        optional: true
+      '@ant-design/colors':
+        optional: true
+      '@flagsmith/flagsmith':
+        optional: true
+      '@floating-ui/dom':
+        optional: true
+      '@js-temporal/polyfill':
+        optional: true
+      '@material/material-color-utilities':
+        optional: true
+      launchdarkly-js-client-sdk:
+        optional: true
+      posthog-js:
+        optional: true
+      vue-i18n:
         optional: true
 
   '@zip.js/zip.js@2.23.0':
@@ -2800,6 +2842,21 @@ packages:
       typescript:
         optional: true
 
+  vuetify@4.2.5:
+    resolution: {integrity: sha512-L9o/pE3t74GiBEvbeOeXf63Jhq+AEIZaTIFp05j5y4lQ9fSXxHboqXm8HSfG5EuzGfg1FFyB5pZt+uDiF2/jdg==}
+    peerDependencies:
+      typescript: '>=4.7'
+      vite-plugin-vuetify: '>=2.1.0'
+      vue: ^3.5.0 || ^3.6.0-0
+      webpack-plugin-vuetify: '>=3.1.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vite-plugin-vuetify:
+        optional: true
+      webpack-plugin-vuetify:
+        optional: true
+
   w3c-xmlserializer@6.0.0:
     resolution: {integrity: sha512-4Nsy8K5Tr6SPDH9jhKJOHf7ChDrc1zufZTVSF7x72hwuEXBqxqk9G6cK+K2NRUtB3iELRJqjXb4JPDMBjMTl2Q==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
@@ -3238,6 +3295,8 @@ snapshots:
       levn: 0.4.1
 
   '@exodus/bytes@1.16.0': {}
+
+  '@fontsource/roboto@5.3.0': {}
 
   '@hapi/address@5.1.1':
     dependencies:
@@ -3772,6 +3831,10 @@ snapshots:
   '@vue/tsconfig@0.9.1(typescript@6.0.3)(vue@3.5.44(typescript@6.0.3))':
     optionalDependencies:
       typescript: 6.0.3
+      vue: 3.5.44(typescript@6.0.3)
+
+  '@vuetify/v0@1.2.3(vue@3.5.44(typescript@6.0.3))':
+    dependencies:
       vue: 3.5.44(typescript@6.0.3)
 
   '@zip.js/zip.js@2.23.0': {}
@@ -5555,6 +5618,23 @@ snapshots:
       '@vue/shared': 3.5.44
     optionalDependencies:
       typescript: 6.0.3
+
+  vuetify@4.2.5(typescript@6.0.3)(vue@3.5.44(typescript@6.0.3)):
+    dependencies:
+      '@vuetify/v0': 1.2.3(vue@3.5.44(typescript@6.0.3))
+      vue: 3.5.44(typescript@6.0.3)
+    optionalDependencies:
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - '@adobe/leonardo-contrast-colors'
+      - '@ant-design/colors'
+      - '@flagsmith/flagsmith'
+      - '@floating-ui/dom'
+      - '@js-temporal/polyfill'
+      - '@material/material-color-utilities'
+      - launchdarkly-js-client-sdk
+      - posthog-js
+      - vue-i18n
 
   w3c-xmlserializer@6.0.0:
     dependencies:
