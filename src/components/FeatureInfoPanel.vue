@@ -13,5 +13,3 @@ const viewerStore = useViewerStore()
     </div>
   </div>
 </template>
-
-<style computed></style>

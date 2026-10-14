@@ -1,1 +1,1 @@
-export type FeaturePropertyList = { key: string; value: string }[]
+export type FeaturePropertyList = { key: string; value: unknown }[]
