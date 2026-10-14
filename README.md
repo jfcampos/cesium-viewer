@@ -1,6 +1,12 @@
 # Cesium + Vue Viewer
 
+[![AI-DECLARATION: hint](https://img.shields.io/badge/䷼%20AI--DECLARATION-hint-ecfccb?labelColor=ecfccb)](https://ai-declaration.md)
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=vercel)](https://cesium-viewer-pi.vercel.app/)
+
 A personal learning project that integrates [CesiumJS](https://cesium.com/platform/cesiumjs/) into a [Vue 3](https://vuejs.org/) application built with [Vite](https://vite.dev/).
+
+**Live demo:** https://cesium-viewer-pi.vercel.app/
 
 ## Features
 
